@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LarissaWithers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("wallpaper.png");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide">Larissa Withers</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+        <a href="index.html" class="w3-bar-item w3-button"></i> HOME</a>
+        <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="work.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="work.html" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+</nav>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+
+    
+         <!-- About section -->
+         <div class="bgimg-1 w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h4><b>About Me</b></h4>
+            <img src="me.JPG" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+            <div class="w3-content w3-justify" style="max-width:600px">
+              <h4>Larissa Withers</h4>
+              <p>I’m passionate about design and creating new ways to improve the lives of others through digital platforms.
+              </p>
+              <p>I have an advanced Diploma in Interaction design and I am currently working towords a degree in the Digital Experience Design Program at George Brown College. Throughout my studies I have learned to create wireframes, prototypes of applications, websites, and interactive products. I have learned to analyze user needs by developing user test cases. 
+              </p>
+              <p>mail: larissa.withers16@gmail.com</p>
+              <p>tel: 647-327-6792</p>
+              <a href="https://www.linkedin.com/in/larissa-withers/" ><i class="fa w3-hover-opacity">LinkedIn</i></a>
+              <hr class="w3-opacity">
+              
+              </div>
+            </div>
+          </div>
+
+    
+    <!-- End page content -->
+    </div>
+    
+    <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+    
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+    
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+    
+    </script>
+    
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <div class="w3-xlarge w3-section">
+    <div>
+      <i class="fa w3-hover-opacity">Contact:</i>
+    </div>
+    <div>
+    <a href="https://www.linkedin.com/in/larissa-withers/" ><i class="fa w3-hover-opacity">LinkedIn</i></a>
+    <i class="fa w3-hover-opacity">or</i>
+    <i class="fa w3-hover-opacity">larissa.withers16@gmail.com</i>
+    </div>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
